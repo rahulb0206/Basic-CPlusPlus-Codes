@@ -1,0 +1,55 @@
+// CPP program to print pattern 
+#include<iostream.h> 
+  
+
+void StarPattern(int height) 
+{  
+							
+	for (int i=0; i<height; i++ ) 
+	{      int flag;
+							 
+		
+		for (int j = height-1; j>i; j--)                                                // This loop prints * for  height-1 position
+		{                                                                                       
+			cout<<"*"; 
+		}  
+		 flag=1; 
+
+		for (int j = 0; j< ((i*2) +1); j++) 
+		{ 
+			if ( flag%2!=0) 
+			{ 
+				cout<<"*";                                         // prints alternating character with the numbers 
+			} 
+			else
+			{ 
+			cout<< (i + 1); 
+			} 
+			
+			  
+				 flag++; 
+	                } 
+			
+			 
+			for (int j = height-1; j>i; j--)                                // print remaining positio with star
+			{ 
+				cout<<"*"; 
+			} 
+
+		cout<<endl; 
+		} 
+} 
+
+// driver code 
+void  main() 
+{ 
+	int height;
+                cout<<"enter the number of rows of ur amazing pattern";
+                cin>>height;
+	StarPattern(height); 
+
+	 
+	
+} 
+
+ 
